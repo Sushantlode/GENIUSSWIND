@@ -1,0 +1,56 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Outfit', system-ui, sans-serif;
+  --font-display: 'Syne', system-ui, sans-serif;
+
+  --color-energy-50: #ecfdf5;
+  --color-energy-400: #34d399;
+  --color-energy-500: #10b981;
+  --color-energy-600: #059669;
+
+  --color-wind-400: #38bdf8;
+  --color-wind-500: #0ea5e9;
+  --color-wind-600: #0284c7;
+  --color-wind-700: #0369a1;
+  --color-wind-900: #0c4a6e;
+  --color-wind-950: #082f49;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply m-0 min-h-screen overflow-x-hidden bg-slate-950 font-sans text-slate-300 antialiased;
+  }
+
+  ::selection {
+    @apply bg-sky-500/30 text-white;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply border border-white/10 bg-white/5 shadow-xl backdrop-blur-xl;
+  }
+
+  .glass-strong {
+    @apply border border-white/15 bg-white/[0.08] shadow-2xl backdrop-blur-2xl;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-sky-300 via-cyan-200 to-emerald-300 bg-clip-text text-transparent;
+  }
+
+  .glow-sky {
+    box-shadow:
+      0 0 40px rgba(14, 165, 233, 0.25),
+      0 0 80px rgba(16, 185, 129, 0.1);
+  }
+
+  .section-padding {
+    @apply px-5 py-20 sm:px-8 md:py-28 lg:px-12 xl:px-16;
+  }
+}
