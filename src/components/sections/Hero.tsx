@@ -13,7 +13,7 @@ export function Hero() {
         className="absolute inset-0 h-full w-full object-cover"
         poster=""
       >
-        <source src="/hero-video.mp4" type="video/mp4" />
+        <source src={`${import.meta.env.BASE_URL}hero-video.mp4`} type="video/mp4" />
       </video>
 
       <div className="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-950/50 to-slate-950" />
